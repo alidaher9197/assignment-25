@@ -20,7 +20,7 @@ const createDirectory = async (folderName) => {
 const createfile = async (dirName,fileName,text) => {
     try {
         const new_file_path = path.join(dirName, fileName);
-        await fs.writeFile(new_file_path, text);
+        await fs.writeFile(new_file_path, text,"utf-8");
         console.log(`File "${fileName}" created successfully!`);
     } catch (error) {
         console.log(error.message);
